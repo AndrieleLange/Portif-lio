@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --cor-primaria: #000000;
-    --cor-secundaria: #F6F6F6;
-    --cor-terciaria: #22D4FD;
-    --cor-hover: #272727;
+    --cor-primaria: #282C33;
+    --cor-secundaria: #FFFFFF;
+    --cor-terciaria: #C778DD;
+    --cor-hover: #ABB2BF;
 
-    --fonte-primaria: 'Krona one', sans-serif;
+    --fonte-primaria: 'Fira Code', sans-serif;
     --fonte-secundaria: 'Montserrat', sans-serif;
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 .cabecalho__menu__link {
-    font-family: var(--fonte-secundaria);
+    font-family: var(--fonte-primaria);
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--cor-terciaria);
@@ -60,8 +60,8 @@ body {
 }
 
 .apresentacao__conteudo__texto{
-    font-size: 1.5rem;
-    font-family: var(--fonte-secundaria);
+    font-size: 1.2rem;
+    font-family: var(--fonte-primaria);
 }
 
 .apresentacao__links{
@@ -79,7 +79,7 @@ body {
 .apresentacao__links__subtitulo {
     font-family: var(--fonte-primaria);
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .apresentacao__links__navegacao{
@@ -92,11 +92,11 @@ body {
     text-align: center;
     border-radius: 0.5rem;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 1.34375rem 0rem;
     text-decoration: none;
     color: var(--cor-secundaria);
-    font-family: var(--fonte-secundaria);
+    font-family: var(--fonte-primaria);
 }
 
 /* quando o mouse passar por cima */
@@ -121,7 +121,7 @@ body {
     color: var(--cor-primaria);
     background-color: var(--cor-terciaria);
     text-align: center;
-    font-family: var(--fonte-secundaria);
+    font-family: var(--fonte-primaria);
     font-size: 0.9375rem;
     font-weight: 400;
 }
@@ -149,4 +149,32 @@ body {
         width: auto;
     }
     
+}
+
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    color: var(--cor-terciaria);
+}
+
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 15rem;
+    background-color: var(--cor-hover);
+    color: var(--cor-primaria);
+    text-align: center;
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; 
+    left: 50%;
+    transform: translateX(-30%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }
